@@ -1,10 +1,10 @@
 from email.message import EmailMessage
-from app2 import password
 import ssl
 import smtplib
+import os
 
-email_sender = 'warrensiro@gmail.com'
-email_password = password
+email_sender = os.environ.get('EMAIL_USER')
+email_password = os.environ.get("EMAIL_PASS")
 
 
 email_receiver = 'yetahac537@adstam.com'
